@@ -1,0 +1,24 @@
+2013-07-14 09:16:20-0500 [scrapy] INFO: Scrapy 0.16.4 started (bot: Taobao)
+2013-07-14 09:16:21-0500 [taobao] INFO: Spider opened
+2013-07-14 09:16:21-0500 [taobao] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2013-07-14 09:17:21-0500 [taobao] INFO: Closing spider (finished)
+2013-07-14 09:17:21-0500 [taobao] INFO: Dumping Scrapy stats:
+	{'downloader/request_bytes': 35640,
+	 'downloader/request_count': 101,
+	 'downloader/request_method_count/GET': 101,
+	 'downloader/response_bytes': 4485363,
+	 'downloader/response_count': 101,
+	 'downloader/response_status_count/200': 101,
+	 'finish_reason': 'finished',
+	 'finish_time': datetime.datetime(2013, 7, 14, 14, 17, 21, 885749),
+	 'item_scraped_count': 10003,
+	 'log_count/INFO': 4,
+	 'request_depth_max': 1,
+	 'response_received_count': 101,
+	 'scheduler/dequeued': 101,
+	 'scheduler/dequeued/memory': 101,
+	 'scheduler/enqueued': 101,
+	 'scheduler/enqueued/memory': 101,
+	 'start_time': datetime.datetime(2013, 7, 14, 14, 16, 21, 943348)}
+2013-07-14 09:17:21-0500 [taobao] INFO: Spider closed (finished)
+2013-07-14 09:17:22-0500 [scrapy] INFO: Mail sent OK: To=['xianyubo@qq.com'] Cc=None Subject="Scrapy Taobao" Attachs=1

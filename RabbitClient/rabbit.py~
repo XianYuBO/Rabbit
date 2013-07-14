@@ -1,0 +1,26 @@
+#!/urs/bin/python
+# -*- coding:utf-8 -*-
+
+import settings
+
+class Rabbit(object):
+
+    def __init__(self):
+        self.data_path = settings.data_path
+        self.email = settings.email
+        self.result_path = settings.result_path
+        self.password = settings.password
+        self.init_check()
+
+    def check_data(self):
+        
+        
+        
+    def init_check(self):
+        check_data()
+        check_host()
+        
+
+
+if __name__ == '__main__':
+    rabbit = Rabbit()

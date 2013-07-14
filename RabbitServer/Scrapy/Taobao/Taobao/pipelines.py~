@@ -1,0 +1,10 @@
+# Define your item pipelines here
+#
+# Don't forget to add your pipeline to the ITEM_PIPELINES setting
+# See: http://doc.scrapy.org/topics/item-pipeline.html
+import codecs
+class TaobaoPipeline(object):
+    def process_item(self, item, spider):
+        with codecs.open(spider.result_file_name, "a+", encoding="GB18030") as f:
+            f.write(item[u"cat_id"] + u"," + item[u"title"] + u"," + item[u"product_id"] + u"\n")
+        return item

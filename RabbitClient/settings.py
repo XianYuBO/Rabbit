@@ -9,7 +9,7 @@ data_path = u"/home/xianyubo/Code/Rabbit/testData/taobao.url"
 """
 The email to get the message.
 """
-email = u"xianyubo@qq.com"
+email = u"1138836070@qq.com"
 
 url = u"http://127.0.0.1:8000/hello/"
 

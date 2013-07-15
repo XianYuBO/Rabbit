@@ -13,7 +13,7 @@ class TaobaoPipeline(object):
             f.write(item[u"cat_id"] + u"," + item[u"title"] + u"," + item[u"product_id"] + u"\n")
         return item
     def close_spider(self, spider):
-        mailer = MailSender(mailfrom='xianyubo@baidu.com')
+        mailer = MailSender(mailfrom='xianyubo@qq.com')
         name = "Rabbit user"
         try:
             name = re.search("(.+)@", spider.email).group(1)
@@ -26,5 +26,7 @@ class TaobaoPipeline(object):
                Thanks for using Rabbit system.
                If you have some advice or problems, you can contact with me by xianyubo@baidu.com or xianyubo@qq.com.
         """ % (name, os.path.basename(spider.read_query_file_name), os.path.basename(spider.result_file_name))
+        os.system("mv %s %s" % (spider.result_file_name, (spider.result_file_name + "_tmp")))
+        os.system("sort %s | uniq > %s" % ((spider.result_file_name + "_tmp"), spider.result_file_name))
         with open(spider.result_file_name, "rb") as f:
             mailer.send(to=[spider.email], subject="Scrapy Taobao", body=body, attachs=[(os.path.basename(spider.result_file_name), "application/octet-stream", f)])
